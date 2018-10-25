@@ -36,10 +36,15 @@ public class ListasDoblementeEnlazadas {
                 list.Insert(dato);
                   break;
               case 2:
+                System.out.println("Digite el numero");
+                dato=teclado.nextInt();
+                list.InsertAtEnd(dato);
                   break;
               case 3:
+                  list.BorrarAlInicio();
                   break;
               case 4:
+                  list.BorrarAlFinal();
                   break;
               case 5:
                   break;

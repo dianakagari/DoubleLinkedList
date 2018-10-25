@@ -35,7 +35,7 @@ public class Lista {
         fin.siguiente=nuevo;
         fin=nuevo;}
        
-    
+     print();
 }
    
    boolean isEmpty() {
@@ -52,13 +52,47 @@ public class Lista {
            System.out.println("La lista está vacía");
         }
     else
+    { 
+    Node node = this.inicio;
+    
+        System.out.print(node.dato);
+            while (node.siguiente != null) {//el while pregunta si node.sig no es nulo
+                System.out.print(" -> ");
+                node = node.siguiente;
+                System.out.print(node.dato);
+            }
+            System.out.println("");
+        }
+    }
+   void BorrarAlInicio(){//metodo para borrar al inicio
+       Node node = this.inicio;
+       if(isEmpty())
        {
-                   
-                  
-       }
-   
-
-       }
-   
+           System.out.println("La lista esta vacia");}
+       else
+       {
+           Node siguiente = inicio.siguiente;
+           inicio = siguiente;}
+       print();
+       
    }
+   void BorrarAlFinal(){   //metodo para borrar al final
+       if(isEmpty()){
+           System.out.println("La lista esta vacia");
+       }else{
+        Node siguiente = inicio;
+        Node anterior = null;
+            while(siguiente.siguiente != null) {
+                anterior = siguiente;
+                siguiente = siguiente.siguiente;
+            }
+            if(anterior != null) {
+                anterior.siguiente = null;
+            } else {
+                inicio = null;
+            }
+       }
+       print();
+   }
+}
 
